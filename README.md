@@ -7,7 +7,7 @@
 [![Status](https://img.shields.io/badge/Status-Production--Ready-success)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-An automated, resilient Extract, Transform, Load (ETL) pipeline implemented in Python to compile, normalize, and monitor quarterly financial data for the world's top 10 largest commercial banks ranked by market capitalization.
+An automated, resilient Extract, Transform, Load (ETL) pipeline in Python that compiles, normalizes, and monitors quarterly financial data for the world's 10 largest commercial banks by market capitalization.
 
 ---
 
