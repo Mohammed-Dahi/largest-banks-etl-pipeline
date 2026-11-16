@@ -15,12 +15,18 @@ An automated, resilient Extract, Transform, Load (ETL) pipeline in Python that c
 
 ```mermaid
 flowchart LR
-    A["Wikipedia Archive<br/>(Market Cap Data)"] -->|Extract (BeautifulSoup)| B["Raw DataFrame<br/>(Name, MC_USD_Billion)"]
-    C["Cloud Object Storage<br/>(exchange_rate.csv)"] -->|Transform (NumPy & Pandas)| D["Enriched DataFrame<br/>(USD, GBP, EUR, INR)"]
+    A["Wikipedia Archive<br/>Market Cap Data"] -->|Extract with BeautifulSoup| B["Raw DataFrame<br/>Name, MC_USD_Billion"]
+
+    C["Cloud Object Storage<br/>exchange_rate.csv"] -->|Transform with NumPy and Pandas| D["Enriched DataFrame<br/>USD, GBP, EUR, INR"]
+
     B --> D
+
     D -->|Load to CSV| E["Largest_banks_data.csv"]
-    D -->|Load to SQLite| F["Banks.db (Table: Largest_banks)"]
-    F -->|Analytics / Queries| G["Regional Offices & Analytical Checks"]
+
+    D -->|Load to SQLite| F["Banks.db<br/>Table: Largest_banks"]
+
+    F -->|Analytics and Queries| G["Regional Offices and Analytical Checks"]
+
     H["Audit Logger"] -.->|code_log.txt| D
 ```
 
